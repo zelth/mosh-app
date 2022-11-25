@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.accordion {
+	.accordion_heading {
+		display: flex;
+		justify-content: space-between;
+		padding: 16px 0;
+		h2 {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 27px;
+			color: $tertiary-color;
+		}
+	}
+	.accordion_content {
+		ul {
+			padding-left: 0;
+			padding-bottom: 16px;
+			li {
+				display: flex;
+				vertical-align: middle;
+				padding: 9px 0;
+			}
+			img {
+				padding-right: 1rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+@use "../abstracts/" as *;
+
+.hero {
+	background-color: $primary-color;
+	padding: 2rem;
+	gap: 1.5rem;
+
+	h1,
+	h2,
+	p,
+	.btn {
+		font-family: $body-font;
+	}
+
+	h1 {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 38.4px;
+		text-align: center;
+		color: $tertiary-color;
+	}
+
+	section {
+		> p {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 27px;
+			color: $tertiary-color;
+			padding: 1.5rem 0;
+		}
+	}
+
+	.content {
+		&-wrapper {
+			h2 {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 150%;
+			}
+			ul {
+				li {
+					p {
+						font-style: normal;
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 150%;
+						color: $tertiary-color;
+					}
+				}
+			}
+		}
+		&-container {
+			display: block;
+			.desktop-content {
+				display: none;
+			}
+			.mobile-content {
+				display: block;
+			}
+		}
+	}
+
+	@include sm {
+		&-message {
+			width: 67.5%;
+			margin: 0 auto;
+		}
+	}
+
+	@include md {
+		.content-wrapper {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		&-message {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	@include lg {
+		display: flex;
+		align-items: center;
+		padding: 3% 15%;
+		&-banner {
+			flex-grow: 2;
+			h1,
+			p {
+				text-align: left;
+			}
+		}
+
+		.content {
+			&-wrapper {
+				flex-grow: 1;
+				grid-template-columns: repeat(1, minmax(0, 1fr));
+
+				ul {
+					padding-left: 0;
+					padding-bottom: 16px;
+					li {
+						display: flex;
+						vertical-align: middle;
+						padding: 9px 0;
+					}
+					img {
+						padding-right: 1rem;
+					}
+				}
+			}
+			&-container {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				align-items: center;
+				column-gap: 1.5rem;
+				.desktop-content {
+					display: block;
+				}
+				.mobile-content {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(lg, min) {
+		@include breakpoint(xl, max) {
+			padding: 3% 5%;
+		}
+	}
+}

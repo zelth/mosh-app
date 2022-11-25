@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.btn {
+	background: $secondary-color;
+	display: inline-block;
+	padding: 16px 24px;
+	border-radius: 8px;
+	color: $white-smoke;
+	text-transform: uppercase;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+
+	@include lg {
+		width: 220px;
+	}
+}
