@@ -1,4 +1,4 @@
-import { Fragment, FC, useState } from "react";
+import { Fragment, useState } from "react";
 import { Link, Image } from "../../atoms";
 import CircleCheck from "../../../assets/img/circle-check.svg";
 import { Accordion } from "../Accordion";
