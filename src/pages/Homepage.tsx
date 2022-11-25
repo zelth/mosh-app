@@ -29,7 +29,7 @@ const Homepage = () => {
 							<HeroContent
 								img={Image2}
 								title="One-on-one therapy sessions"
-								items={data?.consultation}
+								items={data?.therapy}
 								buttonLink="https://www.getmosh.com.au/booking/mental_health"
 								buttonTitle="Book therapist"
 							/>
